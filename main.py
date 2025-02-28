@@ -1,6 +1,6 @@
-import neuralfoil as nf  # `pip install neuralfoil`
+import neuralfoil as nf
 import numpy as np
-import aerosandbox as asb  # `pip install aerosandbox`
+import aerosandbox as asb
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -11,8 +11,8 @@ ax.plot(X, Y, color='green')
 print(X)
 plt.show()
 
-aero = nf.get_aero_from_airfoil(  # You can use AeroSandbox airfoils as an entry point
-    airfoil=asb.Airfoil("naca4412"),  # any UIUC or NACA airfoil name works
+aero = nf.get_aero_from_airfoil(
+    airfoil=asb.Airfoil("naca4412"),
     alpha=5, Re=200133,
     model_size='xxxlarge',
     device='cpu'
